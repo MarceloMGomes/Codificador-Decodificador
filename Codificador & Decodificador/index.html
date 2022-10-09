@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div id="class">
+        <div class="teste">
+            <h1>Codificador & Decodificador</h1>
+        <form action="">
+            <h2>O que você deseja?</h2>
+            <input type="radio" name="cript" id="codificar">Codificar
+            <input type="radio" name="cript" id="decodificar">Decodificar
+
+            <h2>Escreva aqui a sua mensagem:</h2>
+            <textarea name="msg-original" id="msg-original" cols="70" rows="15" placeholder="Digite aqui"></textarea>
+            <br>
+            
+            <select id="select">
+                <option value="Selecione">Selecione a Criptografia</option>
+                <option value="base64">Base64</option>
+                <option value="cifraCesar">Cifra de César</option>
+            </select>
+
+            <br><br>
+
+            <div id="chave-container">
+                <label class="chave" for="range">Escolha o Valor</label>
+                <div class="slider-range">
+                    <input type="range" value="1" min="1" max="26" class="range" id="range"
+                        oninput="rangenumber.value=value" />
+                    <input type="number" value="1" id="rangenumber" min="1" max="26" oninput="range.value=value" />
+                </div>
+            </div>
+            <br>
+            <input type="button" value="Executar" id="executar" onclick="traduzir()">
+
+            <h2>Verifique aqui a sua mensagem:</h2>
+            <textarea name="msg-criptografada" id="msg-criptografada" cols="70" rows="15" placeholder="Verifique aqui a sua mensagem"></textarea>
+
+        </form>
+        </div>
+    </div>
+        <script src="js/js.js"></script>
+
+</body>
+</html>
